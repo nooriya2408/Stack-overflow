@@ -78,7 +78,7 @@ import { deleteQuestion, voteQuestion } from "../../actions/question";
     const User = useSelector((state) => (state.currentUserReducer))
     const location = useLocation()
     //console.log(location)
-    const url = 'http://localhost:3000'
+    const url = 'https://stack-overflow-server-1g8s.onrender.com'
 
     const handlePostAns = (e,answerLength) =>{
   e.preventDefault()
