@@ -3,13 +3,14 @@ import { useLocation,useNavigate } from 'react-router-dom'
 import { useSelector} from 'react-redux'
 import './HomeMainbar.css'
 import QuestionList from './QuestionList'
+//import currentUserReducer from '../../reducers/currentUser'
 
 
 
 const HomeMainbar = () => {
 
     const location = useLocation()
-const user = 1;
+const user = useSelector(state => state.currentUserReducer);
 const navigate = useNavigate()
 
   const questionsList = useSelector(state => state.questionsReducer) 

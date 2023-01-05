@@ -7,7 +7,7 @@
     try{
         const { data } = await api.signUp(authData)
         dispatch({ type: "AUTH", data})
-        dispatch(setCurrentUser (JSON.parse(localStorage.getItem('profile'))))
+         dispatch(setCurrentUser(JSON.parse(localStorage.getItem('Profile')))) 
         navigate('/')
     }catch (error){
         console.log(error)
@@ -19,7 +19,7 @@
     try{
         const { data } = await api.logIn(authData)
         dispatch({ type: 'AUTH', data})
-        dispatch(setCurrentUser (JSON.parse(localStorage.getItem('profile'))))
+        dispatch(setCurrentUser(JSON.parse(localStorage.getItem('Profile')))) 
         navigate('/')
     }catch (error){
     console.log(error)
